@@ -1,0 +1,37 @@
+@model List<MvcTekrar.Models.Ogrenci>
+ 
+<h2>Ürün Listesi</h2>
+
+
+<a asp-action="Ekle" type="button" class="btn btn-success">+Yeni Ürün Ekle</a>
+
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Öğrenci Adı</th>        
+            <th>No</th>        
+            <th>Bölüm Adı</th>     
+            <th>Düzenle</th>   
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var ogrenci in Model)
+        {
+            <tr>  
+                <td>@ogrenci.Ad</td>
+                <td>@ogrenci.No</td>
+                <td>@ogrenci.Bolum.Ad</td>
+                <td>
+                    <a asp-action="Sil" asp-route-id="@ogrenci.Id" type="button" class=" btn btn-outline-danger">Sil</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+

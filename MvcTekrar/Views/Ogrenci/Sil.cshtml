@@ -1,0 +1,17 @@
+@model MvcTekrar.Models.Ogrenci
+
+<h2 class="text-danger">Kayıt Sil</h2>
+<h3>Bu ürünü silmek istediğinizden emin misiniz</h3>
+
+<div style="border: 1px solid #ddd; padding:20px; border-radius:8px;" >
+    <p><strong>Ürün Adı:</strong>@Model.Ad</p>
+    <p><strong>Fiyatı:</strong>@Model.No</p>
+    <p><strong>Kategori Adı</strong>@Model.Bolum</p>
+    
+    <form asp-action="Sil" method="post">
+        <input type="hidden" asp-for="Id">
+
+        <button type="submit" class="btn btn-danger">Evet,Sil</button>
+        <a asp-action="Index" class="btn btn-secondary">Vazgeç</a>
+    </form>
+</div>

@@ -1,0 +1,26 @@
+@model MvcTekrar.Models.Ogrenci
+
+<h2> Yeni Öğrenci EKle</h2>
+
+<form asp-action="Ekle" method="post">
+
+    <div class="form-group" style="margin-bottom:15px;">
+        <label class="form-label">Öğrenci Adı</label>
+        <input asp-for="Ad"  class="form-control" placeholder="Ürün Adı Giriniz" required />
+    </div>
+
+    <div class="form-group" style="margin-bottom:15px;">
+        <label class="form-label">Öğrenci Numarası</label>
+        <input asp-for="No" type="number" step="0.01"  class="form-control" placeholder="Ürünün Fiyatını Giriniz" required />
+    </div>
+
+    <div class="form-group" style="margin-bottom:15px;">
+        <label class="form-label">Bölüm</label>
+        <select asp-for="BolumId" asp-items="ViewBag.BolumListesi" class="form-control" required>
+            <option value="">--Lütfen Bir Bölüm Seçin--</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+    <a asp-action="Index" class="btn btn-secondary" style="margin-left:10px;">İptal et ve Listeye dön</a>
+</form>
