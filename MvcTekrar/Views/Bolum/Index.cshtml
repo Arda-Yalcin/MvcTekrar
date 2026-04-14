@@ -1,0 +1,25 @@
+@model List<MvcTekrar.Models.Bolum>
+
+<a asp-action="Ekle" type="button" class="btn btn-success">+Yeni Bolum Ekle</a>
+
+<table class="table">
+    <thead>
+        <tr>       
+            <th>Bölüm Adı</th>
+            <th>Düzenle</th>   
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var bolum in Model)
+        {
+            <tr>  
+                <td>@bolum.Ad</td>
+                <td>
+                    <a asp-action="Sil" asp-route-id="@bolum.Id" type="button" class=" btn btn-outline-danger">Sil</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

@@ -66,14 +66,14 @@ namespace MvcTekrar.Controllers
             bool bagliOgrenciVarmi= _context.Ogrenciler.Any(u => u.BolumId == id);
             if (bagliOgrenciVarmi)
             {
-                TempData["HataMEsaji"]="Bu Kategori Silinemez! Çünkü Bu Kategorinin Içerisinde Hala Ürün Bulunmakta";
+                TempData["HataMesaji"]="Bu Kategori Silinemez! Çünkü Bu Kategorinin Içerisinde Hala Ürün Bulunmakta";
                 return RedirectToAction(nameof(Sil), new{id=id});
             }
-            var kategori = _context.Bolumler.Find(id);
+            var bolum = _context.Bolumler.Find(id);
 
-            if(kategori != null)
+            if(bolum != null)
             {
-                _context.Bolumler.Remove(kategori);
+                _context.Bolumler.Remove(bolum);
                 _context.SaveChanges();
             }
             return RedirectToAction("Index"); //nameof ile aynı anlama geliyor
