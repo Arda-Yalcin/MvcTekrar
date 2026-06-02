@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MvcTekrar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72d5cb043158c4bbed471416112fcc7f2985d6cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c046e35e838101704b7476746fc37d004291202")]
 [assembly: System.Reflection.AssemblyProductAttribute("MvcTekrar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MvcTekrar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
